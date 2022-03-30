@@ -8,7 +8,7 @@ RUN curl -s https://raw.githubusercontent.com/armosec/kubescape/master/install.s
 
 COPY entrypoint.sh /entrypoint.sh
 
-# change permission to execute the script and
+# change permission to execute the script ands
 RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
