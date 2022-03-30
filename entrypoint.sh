@@ -10,3 +10,4 @@ then
 kubescape scan framework nsa $1 *.yaml 
 else 
 kubescape scan framework nsa $1 *.yaml -t $2 
+fi 
