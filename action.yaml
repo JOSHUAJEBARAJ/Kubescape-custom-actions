@@ -1,0 +1,24 @@
+# action.yml
+name: 'Kubescape custom actions'
+description: 'GitHub action to scan your kubernetes yaml fields using the kubescape'
+branding:
+  icon: 'shield'
+  color: 'blue'
+inputs:
+  path:
+    description: 'File or directory to run scan on'
+    required: false
+    default: '.'
+  threshold:
+    description: 'Optional flag to set the threshold'
+    required: false
+    default: ''
+outputs:
+  output:
+    description: 'The output of bandit'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.path }}
+    - ${{ inputs.threshold }}
